@@ -1,3 +1,3 @@
 # javascript
 Programming projects for JavaScript class
-test
+testing the program
