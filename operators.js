@@ -46,7 +46,7 @@ string argument "Hello"
 
 */
 /*=============================================================================
-8. Member Accessor Operator: //These is the "." in Console.Log()...It allows
+8. Member Accessor Operator: //This is the "." in Console.Log()...It allows
 us to access the different "members" of this specific object
 
 this allows us to access the log function of the console object inside of JavaScript
