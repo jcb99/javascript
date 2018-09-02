@@ -2,11 +2,10 @@
 
 /*1. Assignment: "="
  a = 10;
-*/
+ */
+
 /*=============================================================================
-
 2. Arithmetic: "+", "-", "*", "/", "%" (Remainder Amt...called "Modulus")
-
 var m = 10 % 3;
 console.log(m);
 */
@@ -23,7 +22,6 @@ console.log(a);
 
 /*=============================================================================
 4. String: "+" (As concatenation, NOT ADDITION)
-
 */
 
 /*=============================================================================
@@ -32,8 +30,8 @@ var b = 1 + 2 * 3; //This is a completely different result than the line that fo
 var c = (1 + 2) * 3; //Order of Ops PEMADS
 console.log(b);
 console.log(c);
-
 */
+
 /*=============================================================================
 6. Function Invocation Operators: "()" (You can also use parens to invocate a function)
 console.log('Hello'); The parens are fucntion invocation ops...This is showing us
@@ -43,22 +41,18 @@ string argument "Hello"
 
 /*=============================================================================
 7. Logical Operators: "||" (or), "&&" (and)
-
 */
+
 /*=============================================================================
 8. Member Accessor Operator: //This is the "." in Console.Log()...It allows
-us to access the different "members" of this specific object
-
-this allows us to access the log function of the console object inside of JavaScript
-
+us to access the different "members" of this specific object AKA this allows us
+to access the log function of the console object inside of JavaScript
 */
 
 /*=============================================================================
 9. Code Block Operators "{}"
-
 */
 
 /*=============================================================================
 10. Array Element Access Operator "[]"
-
 */
