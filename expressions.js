@@ -20,5 +20,5 @@ let c = 2;
 let = a = b + c;
 
 //1. Let a .... (A variable declaration)
-//2. Performing an evaluation of b + c using the addition operator
-//3. The result of b + c is assinged to a
+//2. b + c .... Performing an evaluation of b + c using the addition operator
+//3. a =   .... The result of b + c is assinged to a
