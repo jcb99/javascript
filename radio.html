@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<form action="" method="get">
+  <input type="radio" name="Bulb" value="bulbon"  onclick="document.getElementById('myimg').src='images/pic_bulbon.gif'">Bulb On
+  <br />
+  <input type="radio" name="Bulb" value="bulboff" checked= "checked" onclick="document.getElementById('myimg').src='images/pic_bulboff.gif'">Bulb Off <!--The "checked" value checks it by default!-->
+  <br>
+  <input type="radio" name="Bulb" value="cat" onclick="document.getElementById('myimg').src='cat.jpg'">Neither
+  <br><br>
+  <input type="submit" name="submit" value="Submit">
+  <br> <br>
+  <img id="myimg" src="images/pic_bulboff.gif" style="height:100px">
+  <br />
+</form>
+  </body>
+</html>
