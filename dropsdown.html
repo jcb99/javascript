@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+      <form action="" method="post">
+        <select value="color" onclick="colorChange()" id="color">
+          <option value="blue">New England Patriots</option>
+          <option value="red">Buffalo Bills</option>
+          <option value="yellow">New York Jets</option>
+          <option value="green">Miami Dolphins</option>
+        </select>
+      </form>
+
+  </body>
+
+  <script >
+    function colorChange() {
+      let color = document.getElementById('color').value;
+      document.body.style.background = color;
+    }
+
+
+  </script>
+
+  </html>
