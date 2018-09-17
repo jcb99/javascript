@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="hideElements()">
+    <form action="" method="post">
+
+      <div id="country">
+        <label>Country: </label>
+      </div>
+
+      <div id="state">
+          <label>State: </label>
+      </div>
+
+      <div id="province">
+        <label>Province</label>
+      </div>
+
+      <div id ="city">
+        <label>City</label>
+      </div>
+    </form>
+  </body>
+
+  <script>
+      function hideElements(){
+      document.getElementById("state").style.display = "none";
+      document.getElementById("province").style.display = "none";
+      document.getElementById("city").style.display = "none";
+    }
+  </script>
+</html>

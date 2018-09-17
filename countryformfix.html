@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="hideElements()">
+      <form action="" method="post">
+          <div  id = "country">
+            <label>Country:</label>
+            <select onchange="showSP()" id="countryval">
+              <option value="US">United States</option>
+              <option value="UK">Ukraine</option>
+            </select>
+          </div>
+
+        <div id = "state">
+            <label id="statelabel">State: </label>
+            <input type="text" onkeyup="showCity()" id="uscityval">
+          </div>
+
+          <div  id = "province">
+            <label id="provincelabel" >Province: </label>
+            <select onchange="showCity()" id="ukcityval">
+              <option value="Lviv">Lviv</option>
+              <option value="Lvivs">Lvivs</option>
+            </select>
+        </div>
+
+        <div id="city">
+          <label>City: </label>
+          <select>
+            <option value="State College">State College</option>
+            <option value="Lewistown">Lewistown</option>
+          </select>
+        </div>
+
+        <div id = "ucity">
+          <label>City: </label>
+          <select>
+            <option value="lvivs">Lviv</option>
+          </select>
+        </div>
+
+      </form>
+  </body>
+
+  <script>
+
+  function hideElements() {
+      document.getElementById("state").style.display = "none";
+      document.getElementById("province").style.display = "none";
+      document.getElementById("city").style.display = "none";
+      document.getElementById("ucity").style.display = "none";
+    }
+
+  function showSP() {
+    hideElements();
+    let aValue = document.getElementById("countryval").value;
+    if (aValue=="US")
+    {
+      document.getElementById("state").style.display = "block";
+      document.getElementById("statelabel").style.display="block";
+      document.getElementById("province").style.display = "none";
+      document.getElementById("provincelabel").style.display="none";
+    }
+
+    else if(aValue=="UK"){
+      document.getElementById("province").style.display = "block";
+      document.getElementById("provincelabel").style.display="block";
+      document.getElementById("state").style.display = "none";
+      document.getElementById("statelabel").style.display="none";
+    }
+
+  }
+
+  function showCity() {
+
+    let bValue = document.getElementById("uscityval").value;
+    let cValue = document.getElementById("ukcityval").value;
+
+    if (bValue == "PA" || bValue == "Pennsylvania")
+    {
+       document.getElementById("city").style.display = "block";
+    }
+
+    else {
+    document.getElementById("city").style.display = "none";
+    }
+
+  }
+
+  if (cValue == "ukcity" || cValue =="Lviv")
+  {
+    document.getElementById("ucity").style.display = "block";
+
+  }
+
+/*  function showUCity() {
+     document.getElementById("ucity").style.display = "block";
+  }*/
+  </script>
+</html>

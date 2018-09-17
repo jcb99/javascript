@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="hideElements()">
+    <form action="" method="post">
+
+      <div id="country">
+        <label>Country: </label>
+      </div>
+
+      <div id="city">
+          <label>City: </label>
+      </div>
+
+      <div id="province">
+        <label>Province</label>
+      </div>
+
+      <div id ="city">
+        <label>City</label>
+      </div>
+    </form>
+  </body>
+
+  <script>
+      function hideElement(){
+      document.getElementById("state").style.display = "none";
+      document.getElementById("province").style.display = "none";
+      document.getElementById("city").style.display = "none";
+    }
+  </script>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Form</title>
+  </head>
+
+  <body onload="hideElements()">
+
+  <form action="" method="post">
+    <div id="country">
+    <label>Country: </label>
+    <select>
+      <option value="US" onclick="showState()">United States</option>
+      <option value="Ukraine" onclick="showProvince()">Ukraine</option>
+    </select>
+    <br />
+  </div>
+
+  <div id="state">
+    <label>State: </label>
+    <input type="text" id="state_user" placeholder="State" onkeyup="showCityUS()">
+  </div>
+
+  <div id="province">
+    <label>Province: </label>
+    <select>
+      <option value="Lviv" onclick="showCityUkraine()">Lviv</option>
+    </select>
+  </div>
+
+  <div id="cityUS">
+    <label>City: </label>
+    <select>
+      <option value="State College">State College</option>
+      <option value="Lewistown">Lewistown</option>
+    </select>
+  </div>
+
+  <div id="cityUkraine">
+    <label>City: </label>
+    <select>
+      <option value="Lviv">Lviv</option>
+    </select>
+  </div>
+
+  </form>
+
+  </body>
+
+  <script>
+
+  function hideElements(){
+    document.getElementById("state").style.display = "none";
+    document.getElementById("province").style.display = "none";
+    document.getElementById("cityUS").style.display = "none";
+    document.getElementById("cityUkraine").style.display = "none";
+  }
+
+  function showState(){
+    /*hideElements();*/
+    document.getElementById("state").style.display = "block";
+  }
+
+  function showProvince(){
+    hideElements();
+    document.getElementById("province").style.display = "block";
+  }
+
+  function showCityUS(){
+    let user_text = document.getElementById("state_user").value;
+    if (user_text == "PA"){
+      document.getElementById("cityUS").style.display = "block";
+    }
+  }
+
+   function showCityUkraine(){
+      document.getElementById("cityUkraine").style.display = "block";
+    }
+
+  </script>
+
+</html> -->
