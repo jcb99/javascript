@@ -23,12 +23,11 @@
         let ul = document.getElementById('list');
         let li = document.createElement('li');
         let numChildren = ul.children.length +1;
-        let nullness = document.getElementById("typedname").value.trim();
+        let aName = document.getElementById("typedname").value.trim();
 
-        if (nullness != "") {
+        if (aName != "") {
           li.setAttribute("id", "element" + numChildren);
           /*li.appendChild(document.createTextNode('Audrey'));*/
-          let aName = document.getElementById("typedname").value;
           li.appendChild(document.createTextNode(aName));
           ul.appendChild(li);
           document.getElementById('typedname').value = '';
