@@ -32,6 +32,7 @@ button {
   margin: 10px 0 0;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  onclick: "addLi()";
 }
 button:hover {
   color: #333;
