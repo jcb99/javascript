@@ -1,5 +1,5 @@
-let x = document.getElementsByTagName("button");
-x[0].onclick = function() {addLi()};
+let addButton = document.getElementsByTagName("button");
+addButton[0].onclick = function() {addLi()};
 
 function addLi() {
     let ul = document.getElementById('incomplete-tasks');
