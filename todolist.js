@@ -10,6 +10,7 @@ function addLi() {
 
     //creates and sets the type attribute for the input getElementsByTagName
       checkbox.setAttribute("type", "checkbox");
+      checkbox.setAttribute("onclick", "addComplete(this)")
 
     //Creates the child label object
     let label = document.createElement('label');
@@ -47,14 +48,11 @@ function addLi() {
   }
 
   function deleteLi(item) { //we can name the passed in value anything we want
-    //Grab parent <ul>
-      let ul = document.getElementById('incomplete-tasks');
-
-    //figure out which li
-      let child = item.parentNode; //this is the actual button itself that is being grabbed and getting the parent of the button
+      let li = item.parentNode;
+      let ul = li.parentNode;
 
     //remove child
-      ul.removeChild(child);
+      ul.removeChild(li);
   }
 
   function editLi(item) {
@@ -67,9 +65,62 @@ function addLi() {
     //Get the innerHTML of the label
     let labeltext = li.childNodes[1].innerHTML;
 
+    let textBox = li.childNodes[2];
+
     //Put the labels text into the value of the textbox
     li.childNodes[2].setAttribute("value", labeltext);
 
+    textBox.setAttribute("value", labeltext);
 
+    //Change the edit button's text to save...
+    item.innerHTML="Save";
+
+    item.onclick = function() { saveLi(this) };
+  }
+
+  function saveLi(item){
+    //remove edit mode class from the li
+    let li = item.parentNode; //the button is being passed in...the parent node of the button is the li...the li is now having the class of edit mode removed
+    li.removeAttribute("class", "editMode");
+
+    //remove value of the textBox
+    let textBoxVal = li.childNodes[2].value;
+
+    //label's inner html needs to be changed to the value of the textBox
+    li.childNodes[1].innerHTML=textBoxVal;
+
+    //change innerhtml to say EDIT not SAVE
+      item.innerHTML="Edit";
+
+      item.onclick = function() { editLi(this)};
+  }
+
+  function addComplete(item){
+    //Get the entire ul of the completed tasks
+    let ul = document.getElementById("completed-tasks");
+
+    //Get the li of the checkbox item
+    let moveChild = item.parentNode;
+
+    //Append child to the new ul
+    ul.appendChild(moveChild);
+
+    //set onclick event to addIncomplete
+    item.onclick = function() { addIncomplete(this) };
+
+  }
+
+  function addIncomplete(item){
+    //Get the entire ul of the completed tasks
+    let ul = document.getElementById("incomplete-tasks");
+
+    //Get the li of the checkbox item
+    let moveChild = item.parentNode;
+
+    //Append child to the new ul
+    ul.appendChild(moveChild);
+
+    //set onclick event to addComplete...If we check the box uncheck and then check it again
+    item.onclick = function() { addComplete(this) };
 
   }
