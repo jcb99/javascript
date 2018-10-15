@@ -6,7 +6,7 @@ console.log(a[1]);*/
 
 a[0]=7;
 console.log(a[0]);
- 
+
 
 let c = [4, 'alex', true]; //In JS you are allowed to have multiple datatypes in an array
 console.log(c);
